@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pinterest - Práctica 1</title>
+    <link
+      rel="icon"
+      href="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715359084/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/favicon_aa4ctf.ico"
+      type="image/x-icon"
+    />
+    <meta
+      name="description"
+      content="Proyecto HTML de arquitectura de la información en RockTheCode que replica una web como Pinterest"
+    />
+    <meta name="author" content="Juanma 'Goblin' Martínez" />
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.pinterest.es">
+    <meta name="keywords" content="práctica, HTML, arquitectura de la información, pinterest, RockTheCode, réplica, goblin proyect">
+    <!-- LOS ARCHIVOS CSS Y JS QUE IRÍAN EN LOS ATRIBUTOS HREF DE ABAJO ESTÁN CREADOS PERO VACÍOS-->
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./main.js" defer></script>
+    <html prefix="og: https://ogp.me/ns#">
+    <meta property="og:title" content="Pinterest - Práctica 1" />
+    <meta property="og:description" content="Proyecto HTML de arquitectura de la información en RockTheCode que replica una web como Pinterest">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pr-ctica-01-01-arquitectura-de-la-informaci-n.vercel.app/" />
+    <meta property="og:image" content="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715412181/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/pinterest_cc3q94.png" />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Pinterest - Práctica 1">
+    <meta name="twitter:description" content="Proyecto HTML de arquitectura de la información en RockTheCode que replica una web como Pinterest">
+    <meta name="twitter:site" content="@pinterestpractica">
+    <meta name="twitter:creator" content="@juanmagoblinmartinez">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715412181/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/pinterest_cc3q94.png">
+    <!-- SE INCLUYE EL SIGUIENTE ELEMENTO DE ESTILO PARA SUAVIZAR EL SCROLL AL REENVIAR AL USUARIO DENTRO DE LA PÁGINA -->
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <!-- EL HEADER NO DESAPARECE EN LA WEB ORIGINAL AL REALIZAR SCROLL HACIA ABAJO -->
+      <h1>
+        <!-- SE UTILIZÓ ATRIBUTO WIDTH SÓLO PARA QUE EL DESPLIEGUE DE LA WEB FUERA MÁS AMABLE, SE LE DARÍA FORMATO STYLE MEJOR CON CSS SI LO UTILIZÁRAMOS EN LA PRÁCTICA -->
+        <a href="https://pr-ctica-01-01-arquitectura-de-la-informaci-n.vercel.app/" title="Pinterest, la web de las ideas creativas" aria-label="Pinterest, la web de las ideas creativas"> <img id="main-logo" src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715671451/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Pinterest-Logo-Transparent-Images-PNG_dtncrc.png" alt="Logo de la empresa Pinterest" width="75" loading="lazy">
+          Pinterest
+        </a>
+      </h1>
+      <nav class="enlacesInternos">
+        <ul class="enlacesInternos">
+        <!-- LOS ENLACES INCORPORADOS SON LOS ENLACES REALES DE LA WEB ORIGINAL DE PINTEREST ADONDE REDIRIGEN LOS DIFERENTES ELEMENTOS DE LA BARRA NAVEGADORA -->
+          <li>
+            <a href="https://www.pinterest.es/today/" title="Las ideas más creativas de hoy" aria-label="Ir a explorar las ideas más creativas de hoy">Hoy</a>
+          </li>
+          <li>
+            <a href="https://www.pinterest.es/ideas/" title="Encuentra todas las ideas creativas que se te ocurran" aria-label="Ir a encontrar ideas creativas que se te ocurran">Explorar</a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="enlacesExternos">
+        <ul class="enlacesExternos">
+          <li>
+            <a href="https://help.pinterest.com/es/guide/all-about-pinterest" title="Todo acerca de Pinterest" aria-label="Ir a Todo acerca de Pinterest" target="_blank" rel="noopener noreferrer">Info</a>
+          </li>
+          <li>
+            <a href="https://business.pinterest.com/es/" title="Haz crecer tu empresa" aria-label="Ir a Haz crecer tu empresa" target="_blank" rel="noopener noreferrer">Empresa</a>
+          </li>
+          <li>
+            <a href="https://newsroom.pinterest.com/es/" title="Visita nuestro Blog" aria-label="Ir a Blog Pinterest" target="_blank" rel="noopener noreferrer">Blog</a>
+          </li>
+        </ul>
+      </nav>
+      <div>
+        <!-- EN LA WEB ORIGINAL AL CLICKEAR LOS SIGUIENTES BOTONES SE DESPLIEGAN UN POPUP IDÉNTICO CON EL FORMULARIO DE REGISTRO (QUE SE REALIZARÍA TAMBIÉN CON JS & CSS). ADEMÁS (NO INCLUYO TAMPOCO CONSCIENTEMENTE EL CONTENEDOR DE HTML), LO SUSTITUYO POR REENVIAR AL USUARIO QUE CLICKEA EN LOS BOTONES A LA ÚLTIMA SECCIÓN DEL <BODY>, YA QUE ALLÍ SE ENCUENTRA EL MISMO FORMULARIO QUE APARECE EN EL POPUP -->
+        <button id="abrirFormIniciarSesion">
+          <a href="#registrate" aria-label="Ir a Iniciar Sesión">Iniciar sesión</a>
+        </button>
+        <button id="abrirFormRegistro">
+          <a href="#registrate" aria-label="Ir a Regístrate">Registrarse</a>
+        </button>
+      </div>
+    </header>
+    <main>
+      <section id="encuentraLaProximaIdea">
+        <main>
+          <h2 id="encuentra">Encuentra la próxima</h2>
+          <!-- ANTE LA IMPOSIBILIDAD DE USAR CSS O JS PARA RECREAR EL CAMBIO DE H3, IMÁGENES Y COLOR DEL BOTÓN DE SCROLL INFERIOR AL PULSAR CADA UNO DE LOS MINIBOTONES DEL NAVEGADOR BAJO H2, HE OPTADO POR UNA ELEGANTE AUNQUE TRAMPOSA SOLUCIÓN SÓLO CON HTML: AL PULSAR CADA UNO DE LOS BOTONES DEL NAVEGADOR SE REDIRIGE AL USUARIO A UNA PÁGINA IDÉNTICA PERO CON EL BLOQUE YA MENCIONADO DE CÓDIGO DEL MAIN CAMBIADO SEGÚN EL ARTÍCULO ELEGIDO EN EL NAVEGADOR-->
+          <!-- <div id="ideasCocina">
+            <h3>idea para la cena durante la semana</h3>
+            <nav class="ideasCocina">
+              <ul class="ideasCocina">
+                <li id="portadaCocina">
+                    <a href="https://pr-ctica-01-01-arquitectura-de-la-informaci-n.vercel.app/"><img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715934788/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/circle_me5did.png" alt="grey circle" title="Ir a ideas Cocina" width="15" loading="lazy"></a>
+                </li>
+                <li id="portadaHogar">
+                    <a href="https://pr-ctica-01-02-arquitectura-de-la-informaci-n.vercel.app/"><img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715934788/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/circle_me5did.png" alt="grey circle" title="Ir a ideas Hogar" width="15" loading="lazy"></a>
+                </li>
+                <li id="portadaBelleza">
+                    <a href="./index3.html"><img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715934788/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/circle_me5did.png" alt="grey circle" title="Ir a ideas Belleza" width="15" loading="lazy"></a>
+                </li>
+                <li id="portadaBricolaje">
+                    <a href="./index4.html"><img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715934788/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/circle_me5did.png" alt="grey circle" title="Ir a ideas Bricolaje" width="15" loading="lazy"></a>
+                </li>
+              </ul>
+            </nav>
+            <div id="imagenesCocina">
+              <img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715776208/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Cocina_1_ghcr13.jpg" alt="Pizza Black Sabbath" width="100" loading="lazy">
+              <img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715776208/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Cocina_2_humroa.jpg" alt="Entrecot Overkill" width="100" loading="lazy">
+              <img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715776210/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Cocina_3_llawpk.jpg" alt="Tacos Nuclear Assault" width="100" loading="lazy">
+              <img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715776210/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Cocina_4_pcxybv.jpg" alt="Tarta Slayer" width="100" loading="lazy">
+              <img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715776211/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Cocina_5_z8hm1x.jpg" alt="Chef ensangrentado cocinando con soplete marca Exodus" width="100" loading="lazy">
+              <img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715776212/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Cocina_6_obk5nh.jpg" alt="Tapa de guindilla y aceitunas" width="100" loading="lazy">
+              <img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715776212/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Cocina_7_e73whx.jpg" alt="Plato carne, patatas y cítricos Judas Priest" width="100" loading="lazy">
+            </div>
+            <div id="botonCocina">
+              <button title="Sigue descubriendo cómo funciona Pinterest" aria-label="Ir a siguiente sección Busca Una Idea">
+                <a href="#buscaUnaIdea"><img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715703668/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Down_golden_oe2m83.gif" alt="Botón para dirigirte a la siguiente sección Busca Una Idea" width="75" loading="lazy"></a>
+              </button>
+            </div>
+          </div> -->
+          <!-- <div id="ideasHogar">
+            <h3>idea de decoración del hogar</h3>
+            <nav class="ideasCocina">
+              <ul class="ideasCocina">
+                <li id="portadaCocina">
+                    <a href="https://pr-ctica-01-01-arquitectura-de-la-informaci-n.vercel.app/"><img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715934788/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/circle_me5did.png" alt="grey circle" title="Ir a ideas Cocina" width="15" loading="lazy"></a>
+                </li>
+                <li id="portadaHogar">
+                    <a href="https://pr-ctica-01-02-arquitectura-de-la-informaci-n.vercel.app/"><img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715934788/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/circle_me5did.png" alt="grey circle" title="Ir a ideas Hogar" width="15" loading="lazy"></a>
+                </li>
+                <li id="portadaBelleza">
+                    <a href="./index3.html"><img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715934788/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/circle_me5did.png" alt="grey circle" title="Ir a ideas Belleza" width="15" loading="lazy"></a>
+                </li>
+                <li id="portadaBricolaje">
+                    <a href="./index4.html"><img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715934788/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/circle_me5did.png" alt="grey circle" title="Ir a ideas Bricolaje" width="15" loading="lazy"></a>
+                </li>
+              </ul>
+            </nav>
+            <div id="imagenesHogar">
+              <img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715776214/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Hogar_1_vtjjb2.jpg" alt="Bañera antigua con barra para cortina dorada y cortina de Running Wild" width="100" loading="lazy">
+              <img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715776214/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Hogar_2_xckk5c.webp" alt="Rincón de salón, con esquina de sofá y un cojín de Judas Priest" width="100" loading="lazy">
+              <img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715776214/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Hogar_3_kypy39.webp" alt="Salita gaming roja con sillón gaming, alfombra octogonal y mueble para Pc con imágenes estampadas de Iron Maiden" width="100" loading="lazy">
+              <img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715776215/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Hogar_4_rmehxj.jpg" alt="Habitación con muebles de madera clara y cama grande con edredón nórdico y almohada de Slayer" width="100" loading="lazy">
+              <img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715776215/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Hogar_5_smyoyn.webp" alt="Salón con gran sofá moderno y bandera de Accept" width="100" loading="lazy">
+              <img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715776216/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Hogar_6_f8vuxv.jpg" alt="Rincón de habitación con cuadros, vitrina de cristal y cuadro 3D de Megadeth" width="100" loading="lazy">
+              <img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715776217/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Hogar_7_gq1jeb.jpg" alt="salón con sofá, lámpara de pie, mesa baja y bandera de Dio" width="100" loading="lazy">
+            </div>
+            <div id="botonHogar">
+              <button title="Sigue descubriendo cómo funciona Pinterest" aria-label="Ir a siguiente sección Busca Una Idea">
+                <a href="#buscaUnaIdea"><img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715703668/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Down_green_grey_sdf8rx.gif" alt="Botón para dirigirte a la siguiente sección Busca Una Idea" width="75" loading="lazy"></a>
+              </button>
+            </div>
+          </div> -->
+          <!-- <div id="ideasBelleza">
+            <h3>modelo para un nuevo look</h3>
+            <nav class="ideasCocina">
+              <ul class="ideasCocina">
+                <li id="portadaCocina">
+                    <a href="https://pr-ctica-01-01-arquitectura-de-la-informaci-n.vercel.app/"><img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715934788/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/circle_me5did.png" alt="grey circle" title="Ir a ideas Cocina" width="15" loading="lazy"></a>
+                </li>
+                <li id="portadaHogar">
+                    <a href="https://www.pinterest.es/search/pins/?q=receta%20sencilla%20de%20pollo%20para%20cenar"><img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715934788/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/circle_me5did.png" alt="grey circle" title="Ir a ideas Hogar" width="15" loading="lazy"></a>
+                </li>
+                <li id="portadaBelleza">
+                    <a href="./index3.html"><img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715934788/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/circle_me5did.png" alt="grey circle" title="Ir a ideas Belleza" width="15" loading="lazy"></a>
+                </li>
+                <li id="portadaBricolaje">
+                    <a href="./index4.html"><img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715934788/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/circle_me5did.png" alt="grey circle" title="Ir a ideas Bricolaje" width="15" loading="lazy"></a>
+                </li>
+              </ul>
+            </nav>
+            <div id="imagenesBelleza">
+              <img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715776201/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Belleza_1_htj4nf.jpg" alt="Dos personas, hombre y mujer, de espandas en el campo con battle jackets y parches de varios grupos musicales como Anthrax, Over Kill, Forbidden, Destruction, etc." width="100" loading="lazy">
+              <img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715776201/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Belleza_2_mwjf1b.jpg" alt="Joven Doro Pesch con cinturón de hebilla grande, cazadora de cuero y camiseta de Warlock" width="100" loading="lazy">
+              <img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715776201/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Belleza_3_x0ictq.jpg" alt="Grupo de cinco hombres del grupo musical Saxon alrededor de los sesenta años con diferentes modelos rokeros de ropa" width="100" loading="lazy">
+              <img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715776202/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Belleza_4_nq1bwz.jpg" alt="Grupo de cinco personas con diferentes modelos rockeros de ropa, con mujer en posición central, del grupo musical Crystal Viper" width="100" loading="lazy">
+              <img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715776202/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Belleza_5_wmfj7z.png" alt="Mujer andando de espaldas por la calle con chaqueta de vinilo con espaldera de Tankard" width="100" loading="lazy">
+              <img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715776202/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Belleza_6_yutsd4.jpg" alt="Parte superior de un brazo con tatuaje de Melisah de Mercyful Fate" width="100" loading="lazy">
+              <img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715776203/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Belleza_7_kwjfaj.jpg" alt="Mujer de espaldas con chaqueta de cuero y tachas con espaldera de Slayer" width="100" loading="lazy">
+            </div>
+            <div id="botonBelleza">
+              <button title="Sigue descubriendo cómo funciona Pinterest" aria-label="Ir a siguiente sección Busca Una Idea">
+                <a href="#buscaUnaIdea"><img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715703668/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Down_blue_aufdnz.gif" alt="Botón para dirigirte a la siguiente sección Busca Una Idea" width="75" loading="lazy"></a>
+              </button>
+            </div>
+          </div> -->
+          <div id="ideasBricolaje">
+            <h3>truco de jardinería</h3>
+            <nav class="ideasCocina">
+              <ul class="ideasCocina">
+                <li id="portadaCocina">
+                    <a href="https://pr-ctica-01-01-arquitectura-de-la-informaci-n.vercel.app/"><img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715934788/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/circle_me5did.png" alt="grey circle" title="Ir a ideas Cocina" width="15" loading="lazy"></a>
+                </li>
+                <li id="portadaHogar">
+                    <a href="https://www.pinterest.es/search/pins/?q=receta%20sencilla%20de%20pollo%20para%20cenar"><img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715934788/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/circle_me5did.png" alt="grey circle" title="Ir a ideas Hogar" width="15" loading="lazy"></a>
+                </li>
+                <li id="portadaBelleza">
+                    <a href="./index3.html"><img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715934788/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/circle_me5did.png" alt="grey circle" title="Ir a ideas Belleza" width="15" loading="lazy"></a>
+                </li>
+                <li id="portadaBricolaje">
+                    <a href="./index4.html"><img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715934788/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/circle_me5did.png" alt="grey circle" title="Ir a ideas Bricolaje" width="15" loading="lazy"></a>
+                </li>
+              </ul>
+            </nav>
+            <div id="imagenesBricolaje">
+              <img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715776204/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Bricolaje_1_v9kmyi.jpg" alt="Exteriores de una leñera y quemador metálico de leña con forma de Eddie, la mascota del grupo musical Iron Maiden" width="100" loading="lazy">
+              <img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715776205/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Bricolaje_2_rcodxj.jpg" alt="Rincón de jardín con escultura metálica de un escorpión gigante que recuerda a la mascota del grupo musical Scorpions" width="100" loading="lazy">
+              <img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715776205/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Bricolaje_3_soymg0.jpg" alt="Vaya de jardín baja de madera con figura de ganchillo de King Diamond" width="100" loading="lazy">
+              <img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715776205/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Bricolaje_4_lxaes8.webp" alt="Esquina exterior de una casa campestre con asta y bandera de Manowar" width="100" loading="lazy">
+              <img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715776206/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Bricolaje_5_juvrwg.jpg" alt="En el bosque, escultura de bronce sobre una roca de Ronnie James Dio, vocalista de Rainbow, Black Sabbath y Dio" width="100" loading="lazy">
+              <img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715776207/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Bricolaje_6_isxvof.jpg" alt="En exteriores, quemador metálico de leña con forma de War-Pig, la mascota del grupo musical Motörhead; con leñero detrás" width="100" loading="lazy">
+              <img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715776208/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Bricolaje_7_tbcgav.jpg" alt="Rob Halford mayor, con barba y camiseta negra, en una terraza, haciendo el signo de cuernos con la mano izquierda y un gran cactus detrás de él con la misma forma de su mano" width="100" loading="lazy">
+            </div>
+            <div id="botonBricolaje">
+              <button title="Sigue descubriendo cómo funciona Pinterest" aria-label="Ir a siguiente sección Busca Una Idea">
+                <a href="#buscaUnaIdea"><img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715703668/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Down_green_iorxfn.gif" alt="Botón para dirigirte a la siguiente sección Busca Una Idea" width="75" loading="lazy"></a>
+              </button>
+            </div>
+          </div>
+          <div id="scrollSiguienteSeccion">
+            <button>
+              <a href="#buscaUnaIdea">Así es como funciona <img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715705480/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Arrow_down_ykhre3.png" alt="Flecha indicando hacia abajo" width="25" loading="lazy"></a>
+            </button>
+          </div>
+        </main>
+      </section>
+      <section id="buscaUnaIdea">
+        <main>
+          <!-- AL NO PODER REALIZAR EL MONTAJE SÓLO CON HTML, HE REALIZADO OTRA IDEA CONVIRTIENDO TODA LA IMAGEN SIGUIENTE EN UN BOTÓN, LO QUE VIENE A DESEMPEÑAR LA FUNCIÓN DEL ORIGINAL -->
+          <div>
+            <button id="buscaRecetasDePollo" title="Ir a Buscar Recetas Sencillas de Pollo">
+              <a href="https://www.pinterest.es/search/pins/?q=receta%20sencilla%20de%20pollo%20para%20cenar" aria-label="Ir a Buscar Recetas Sencillas de Pollo para Cenar"><img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715793587/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Boto%CC%81n_Busca_Recetas_Pollo_erfaeh.png" alt="Varias imágenes de recetas de pollo con botón de búsqueda encima" width="250" loading="lazy"></a>
+            </button>
+          </div>
+          <div>
+            <h2>Busca una idea</h2>
+            <p>¿Qué es lo siguiente que quieres probar? Piensa en algo que te interese, como "receta sencilla de pollo para cenar", y a ver qué descubres.</p>
+            <button id="exploraIdeasCreativas">
+              <a href="https://www.pinterest.es/ideas/" aria-label="Ir a Explorar ideas creativas">Explorar</a>
+            </button>
+          </div>
+        </main>
+      </section>
+      <section id="guardaLasIdeasQueTeGusten">
+        <main>
+          <div>
+            <h2>Guarda las ideas que te gusten</h2>
+            <p>Colecciona tus favoritos para poder verlos más tarde.</p>
+            <button id="exploraIdeasDecoracion">
+              <a href="https://www.pinterest.es/ideas/decoraci%C3%B3n-del-hogar/913953929334/" aria-label="Ir a Explorar Ideas de Decoración">Explorar</a></button>
+          </div>
+          <div>
+            <nav class="botonesIdeasDecoracion">
+              <ul class="botonesIdeasDecoracion">
+                <li>
+                  <button id="exploraIdeasHelechos" title="Explora ideas de helechos en tu hogar">
+                    <a href="https://www.pinterest.es/search/pins/?q=Helechos%20en%20tu%20futuro%20hogar%20que%20dan%20buen%20rollo" aria-label="Ir a Explorar Ideas de Helechos en tu Hogar"><img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715794751/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Boto%CC%81n_1_seccio%CC%81n_Guarda_las_Ideas_que_te_gustan_bprg0v.png" alt="Imágenes distintas superpuestas de interiores con helechos y plantas" width="150" loading="lazy"></a>
+                  </button>
+                </li>
+                <li>
+                  <button id="exploraIdeasDormitoriosEscandinavos" title="Explora ideas de dormitorios escandinavos">
+                    <a href="https://www.pinterest.es/search/pins/?q=Mi%20dormitorio%20escandinavo" aria-label="Ir a Explorar Ideas de Dormitorios Escandinavos"><img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715794751/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Boto%CC%81n_2_seccio%CC%81n_Guarda_las_Ideas_que_te_gustan_s8q7nf.png" alt="Dormitorio estilo escandinavo con mujer recostada sobre la cama con una taza en sus manos" width="150" loading="lazy"></a>
+                  </button>
+                </li>
+                <li>
+                  <button id="exploraIdeasTerrazas" title="Explora ideas de terrazas">
+                    <a href="https://www.pinterest.es/search/pins/?q=La%20terraza%20de%20mis%20sue%C3%B1os" aria-label="Ir a Explorar Ideas de Terrazas"><img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715794752/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Boto%CC%81n_3_seccio%CC%81n_Guarda_las_Ideas_que_te_gustan_ynyxrx.png" alt="Terraza con muebles blancos y una mujer decorando la mesa" width="150" loading="lazy"></a>
+                  </button>
+                </li>
+                <li>
+                  <button id="exploraIdeasServirBebidas" title="Explora ideas para servir bebidas con estilo">
+                    <a href="https://www.pinterest.es/search/pins/?q=Servir%20bebidas%20con%20estilo" aria-label="Ir a Explorar Ideas para Servir Bebidas con Estilo"><img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715794752/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Boto%CC%81n_4_seccio%CC%81n_Guarda_las_Ideas_que_te_gustan_ifsmlg.png" alt="Jarra estriada naranja en primer plano con varias naranjas de fondo" width="150" loading="lazy"></a>
+                  </button>
+                </li>
+                <li>
+                  <button id="exploraIdeasBaños" title="Explora ideas para remodelar el baño">
+                    <a href="https://www.pinterest.es/search/pins/?q=Nuestra%20renovaci%C3%B3n%20del%20ba%C3%B1o" aria-label="Ir a Explorar Ideas para Remodelar el Baño"><img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715794754/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Boto%CC%81n_5_seccio%CC%81n_Guarda_las_Ideas_que_te_gustan_rl8y3i.png" alt="Parte de un cuarto de baño con espejo redondo y mueble de lavamanos color salmón" width="150" loading="lazy"></a>
+                  </button>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </main>
+      </section>
+      <section id="miraloFabricaloPruebaloHazlo">
+        <main>
+          <div>
+            <button id="buscaEstilosPintalabios" title="Explora estilos de pintalabios">
+              <a href="https://www.pinterest.es/search/pins/?q=tono%20de%20labios" aria-label="Ir a Buscar Estilos de Pintalabios"><img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715798338/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Boto%CC%81n_seccio%CC%81n_4_orexlw.png" alt="Gran imagen de joven mujer maquillada en tonos azules y pendientes largos amarillos, y pequelas fotos superpuestas de otras mujeres maquilladas" width="250" loading="lazy"></a>
+            </button>
+          </div>
+          <div>
+            <h2>Míralo, fabrícalo, pruébalo, hazlo</h2>
+            <p>Lo mejor de Pinterest es descubrir cosas e ideas de personas de todo el mundo.</p>
+            <button id="exploraIdeasBelleza">
+              <a href="https://www.pinterest.es/ideas/belleza/938980608008/" aria-label="Ir a Explorar Ideas de Belleza">Explorar</a>
+            </button>
+          </div>
+        </main>
+      </section>
+      <section id="registrate">
+        <main>
+          <div id="botonSubir">
+            <button title="Vuelve al principio de Pinterest" aria-label="Ir a Principio Pinterest">
+              <a href="#header"><img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715800891/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Arrow_Up_srvvo5.gif" alt="Botón para volver al principio de la página de Pinterest" width="75" loading="lazy"></a>
+            </button>
+          </div>
+          <h2>Regístrate para ver ideas</h2>
+          <div id="formularioRegistro">
+            <div>
+              <img id="main-logo-formulario" src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715671451/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/Pinterest-Logo-Transparent-Images-PNG_dtncrc.png" alt="Logo de la empresa Pinterest" width="75" loading="lazy">
+            </div>
+            <h3>Bienvenido a Pinterest</h3>
+            <p>Encuentra nuevas ideas para probar</p>
+            <form name="formularioRegistro" method="post" action="#/send.php">
+              <label for="correo">Correo</label>
+              <input type="emai" id="email" name="email" placeholder="Correo" required>
+              <label for="contraseña">Contraseña</label>
+              <input type="password" id="password" name="password" placeholder="Contraseña" required>
+              <label for="contraseña">Fecha de nacimiento <img src="https://res.cloudinary.com/dd0zwrz0b/image/upload/v1715844395/01.%20HTML%20Pr%C3%A1ctica%20Arquitectura%20de%20la%20informaci%C3%B3n/information_ij3nv1.svg" title="Para ayudar a que Pinterest sea un lugar seguro, ahora te solicitamos tu fecha de nacimiento. Tu fecha de nacimiento también nos ayuda a ofrecerte recomendaciones mñas personalizadas y anuncios relevantes. No compartimos esta información y no estará visible en tu perfil" alt="icono de información" width="15" loading="lazy"></label>
+              <input type="date" id="birthdate" name="birthdate" required>
+              <label for="continuar"></label>
+              <button id="continuar" aria-label="Botón de envío de formulario relleno" type="submit" title="Regístrate">
+                <!-- FALTA ABAJO LA URL DONDE TE ENVÍA PARA SEGUIR CON EL REGISTRO DEL USUARIO -->
+                <a href="#" target="_blank" rel="noopener noreferrer"></a>Continuar</button>
+            </form>
+            <div>
+              <p>o</p>
+              <button id="continuarConGoogle" aria-label="Botón para registrarse con cuenta de Google">
+                <!-- FALTA ABAJO EL POPUP QUE SURGE PARA REGISTRARTE CON LA CUENTA DE GOOGLE O LA URL DONDE TE MANDA CUANDO PULSAS, QUE ES DE ESTRUCTURA CASI IDÉNTICA QUE EL REPRODUCIDO AQUÍ -->
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                </a>Continuar con Google
+              </button>
+            </div>
+            <div>
+              <p>Si continuas, aceptas los <span><a href="https://policy.pinterest.com/es/terms-of-service" target="_blank" rel="noopener noreferrer"><strong>Términos del servicio</strong></a></span> de Pinterest y confirmas que has leído nuestra <span><a href="https://policy.pinterest.com/es/privacy-policy" target="_blank" rel="noopener noreferrer"><strong>Política de privacidad.</strong></a></span></p>
+              <p><a href="https://policy.pinterest.com/es/notice-at-collection" target="_blank" rel="noopener noreferrer"><strong>Aviso de recopilación de datos</strong></a></p>
+              <!-- FALTARÍAN ABAJO LOS FORMULARIOS DE INICIO DE SESIÓN CON CUENTA DE GOOGLE Y EN EL <DIV> SIGUIENTE EL DE REGISTRO CON CUENTA DE EMPRESA, QUE SE ABREN SUSTITUYENDO AL FORMULARIO QUE APARECE POR DEFECTO EN ESTA SECCIÓN, LOS CUALES NO REPRODUZCO YA QUE ES UN FORMATO DE ESTRUCTURA CASI IDÉNTICO AL QUE SE HA REPRODUCIDO EN ESTA SECCIÓN  -->
+              <p>¿Ya eres miembro? <a href="#" target="_blank" rel="noopener noreferrer"><strong>Iniciar sesión</strong></a></p>
+            </div>
+            <div>
+              <button id="crearCuentaEmpresa" aria-label="Botón para abrir formulario de registro o creación de una cuenta de empresa" >
+                <a href="#" target="_blank" rel="noopener noreferrer"></a>Crear una cuenta para empresas gratuita</button>
+            </div>
+          </div>
+        </main>
+      </section>
+    </main>
+    <footer>
+      <nav class="footer">
+        <ul class="footer">
+          <li><a href="https://policy.pinterest.com/es/terms-of-service" aria-label="Ir a Términos de Servicio" target="_blank" rel="noopener noreferrer">Términos del servicio</a></li>
+          <li><a href="https://policy.pinterest.com/es/privacy-policy" aria-label="Ir a Política de Privacidad" target="_blank" rel="noopener noreferrer">Política de privacidad</a></li>
+          <li><a href="https://help.pinterest.com/es" aria-label="Ir a Ayuda" target="_blank" rel="noopener noreferrer">Ayuda</a></li>
+          <li><a href="https://apps.apple.com/us/app/pinterest/id429047995" aria-label="Ir a página para conseguir aplicación para iPhone" target="_blank" rel="noopener noreferrer">Aplicación para iPhone</a></li>
+          <li><a href="https://play.google.com/store/apps/details?id=com.pinterest" aria-label="r a página para conseguir aplicación para Android" target="_blank" rel="noopener noreferrer">Aplicación para Android</a></li>
+          <li><a href="https://www.pinterest.es/html_sitemap/pinners_a.html" aria-label="Ir a directorio de usuarios" target="_blank" rel="noopener noreferrer">Usuarios</a></li>
+          <li><a href="https://www.pinterest.es/html_sitemap/boards_a.html" aria-label="Ir a directorio de colecciones" target="_blank" rel="noopener noreferrer">Colecciones</a></li>
+          <li><a href="https://www.pinterest.es/html_sitemap/shopping_0.html" aria-label="Ir a directorio de compras" target="_blank" rel="noopener noreferrer">Compras</a></li>
+          <li><a href="https://www.pinterest.es/today/" aria-label="Ir a explorar las ideas más creativas de hoy" target="_blank" rel="noopener noreferrer">Hoy</a></li>
+          <li><a href="https://www.pinterest.es/ideas/" aria-label="Ir a encontrar ideas creativas que se te ocurran" target="_blank" rel="noopener noreferrer">Explorar</a></li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>
